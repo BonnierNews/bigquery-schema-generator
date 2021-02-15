@@ -6,7 +6,7 @@ A sample data file is required for analyzing which will be used when generating 
 ```
 $ python3 generate_schema.py <sample_data_file> --encryption_key_id <key_column_name> --personal_columns <column_names> 
 ```
-`sample_data_file`: path to the sample file to be analyzed
+`sample_data_file`: Path to the sample file to be analyzed.
 
 `encryption_key_id`: If dataset is to be encrypted the column to use for keys, usually the user id.
 
@@ -17,13 +17,13 @@ This will return the generated schema to stdout. To save it to a file:
 $ python3 generate_schema.py <sample_data_file> [options] > schema.json
 ```
 
-Note: Description has to be updated manually after schema generation.
-
-
 For a description on all options, use:
 ```
-$ python3 generate_schema.py -h   
+$ python3 generate_schema.py --help
 ```
+
+### Schema column description
+Column descriptions have to be added to the schema manually after it has been generated.
 
 ## Examples
 
