@@ -45,7 +45,7 @@ def generate_schema(input_file, encryption_key_id, personal_columns, input_forma
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate a schema for Kirby')
     parser.add_argument('input', type=argparse.FileType('r'))
-    parser.add_argument('--encryption_key_id', help='Column that should be key for encryption, if dataset should be encrypted')
+    parser.add_argument('--encryption_key_id', help='Key column for encryption, if dataset should be encrypted')
     parser.add_argument('--personal_columns', nargs='+', help='Columns that contain personal data', default=[])
     parser.add_argument('--input_format', help='json or csv (default = csv)', default='csv')
     parser.add_argument('--csv_dialect', choices=csv_dialects.keys(), help='')
